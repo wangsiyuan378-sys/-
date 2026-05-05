@@ -1,0 +1,16 @@
+# 核心算法
+opencv-python-headless
+mediapipe
+numpy
+
+# WebRTC 增强
+streamlit
+streamlit-webrtc
+av
+
+# 数据处理与可视化
+pandas
+altair
+
+# 报表生成
+reportlab
