@@ -1,14 +1,20 @@
 import cv2
 import numpy as np
 import mediapipe as mp
-import mediapipe.solutions.face_mesh as mp_face_mesh
-import mediapipe.solutions.drawing_utils as mp_drawing # 建议顺便把这个也加上，以后绘图有用
 
-
+# 建议把初始化放在类外面或使用延迟加载
 class FocusDetector:
     def __init__(self):
-        # 1. 初始化算法引擎
-        self.face_mesh = mp_face_mesh.FaceMesh(
+        # 显式尝试获取 solutions
+        try:
+            self.mp_face_mesh = mp.solutions.face_mesh
+            self.mp_drawing = mp.solutions.drawing_utils
+        except AttributeError:
+            # 如果还是找不到，尝试动态导入
+            import mediapipe.solutions.face_mesh as fm
+            self.mp_face_mesh = fm
+        
+        self.face_mesh = self.mp_face_mesh.FaceMesh(
             refine_landmarks=True,
             static_image_mode=False,
             max_num_faces=1,
