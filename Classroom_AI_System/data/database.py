@@ -1,11 +1,19 @@
 import sqlite3
 import threading
 from datetime import datetime
-
+import os
 class ClassroomDB:
     _instance_lock = threading.Lock()
 
     def __init__(self, db_path="data/classroom_v2.db"):
+        # 获取文件夹路径 (即 "data")
+        db_dir = os.path.dirname(db_path)
+        
+        # 如果文件夹不存在，则自动创建它
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+            print(f"检测到目录不存在，已创建: {db_dir}")
+            
         self.db_path = db_path
         self._create_table()
 
