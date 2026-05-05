@@ -1,9 +1,8 @@
 import cv2
 import numpy as np
 import mediapipe as mp
-
-# 使用标准接口获取 face_mesh
-mp_face_mesh = mp.solutions.face_mesh
+import mediapipe.solutions.face_mesh as mp_face_mesh
+import mediapipe.solutions.drawing_utils as mp_drawing # 建议顺便把这个也加上，以后绘图有用
 
 
 class FocusDetector:
