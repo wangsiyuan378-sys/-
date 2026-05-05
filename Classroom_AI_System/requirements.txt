@@ -1,6 +1,7 @@
 streamlit
 streamlit-webrtc
-opencv-contrib-python-headless
+# 核心：只留这一个，它最干净
+opencv-python-headless
 mediapipe
 numpy
 pandas
@@ -8,5 +9,3 @@ altair
 av
 aiortc
 fpdf2
-SQLAlchemy
-psycopg2-binary
