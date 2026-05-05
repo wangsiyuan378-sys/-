@@ -56,7 +56,7 @@ class VideoProcessor:
 
 # --- 3. UI 界面与实时可视化逻辑 ---
 def main():
-    st.title("📖 教学效能辅助决策系统 v2.0")
+    st.title("📖 教学效能辅助决策系统")
     
     # 侧边栏：报告管理
     with st.sidebar:
@@ -87,7 +87,7 @@ def main():
         )
 
     with col_stat:
-        st.subheader("📊 实时分析看板")
+        st.subheader("实时分析看板")
         # 创建动态占位符，用于在原地更新数据
         score_metric = st.empty()
         advice_box = st.empty()
