@@ -1,10 +1,1 @@
-[theme]
-primaryColor = "#4A90E2"    # 科技蓝
-backgroundColor = "#F8F9FA" # 浅灰色背景
-secondaryBackgroundColor = "#FFFFFF"
-textColor = "#2C3E50"       # 深灰色文字
-font = "sans serif"
 
-[server]
-headless = true
-enableCORS = false
