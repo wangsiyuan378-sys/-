@@ -1,20 +1,12 @@
-# --- 核心框架 ---
 streamlit
 streamlit-webrtc
-opencv-python-headless
+opencv-contrib-python-headless
 mediapipe
-
-# --- 视频流与数据处理 ---
 numpy
 pandas
 altair
 av
 aiortc
-
-# --- 兼容性与报告 ---
-tornado==6.3.3
 fpdf2
-
-# --- 数据库扩展 ---
 SQLAlchemy
 psycopg2-binary
